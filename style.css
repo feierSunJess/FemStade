@@ -153,7 +153,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 /* ---------- Hero (Vollbild, Text unten links) ---------- */
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 90vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -388,7 +388,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 @media (max-width: 880px) {
   /* Hero auf Mobile: gestapelt, Bild oben */
   .hero { min-height: auto; flex-direction: column; }
-  .hero__visual { flex: none; width: 100%; height: 70vw; min-height: 280px; }
+  .hero__visual { position: relative; inset: auto; flex: none; width: 100%; height: 75vw; min-height: 300px; }
   .hero__img { object-position: center top; }
   .hero__content { flex: none; width: 100%; padding: .8rem var(--gutter) 1.8rem; text-align: center; align-items: center; background: var(--bg, #fbfafc); backdrop-filter: none; }
   .hero__logo { margin-inline: auto; width: clamp(120px, 45%, 180px); }
