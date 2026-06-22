@@ -211,6 +211,16 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 }
 .values__note { margin-top: 1.6rem; color: var(--text-soft); max-width: 70ch; }
 
+/* ---------- Social Proof ---------- */
+.social-proof { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: clamp(2rem, 4vw, 3rem); padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--violet-soft); border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.social-proof__stat { flex: 1 1 200px; display: flex; flex-direction: column; gap: .4rem; }
+.social-proof__number { font-family: var(--ff-head); font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--violet-deep); line-height: 1; }
+.social-proof__label { font-size: .95rem; color: var(--text-soft); line-height: 1.5; }
+
+/* ---------- Für wen ---------- */
+.fuer-wen { margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--border); }
+.fuer-wen__title { font-size: 1.4rem; margin-bottom: 1.3rem; }
+
 /* ---------- Cards (Vision) ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
 .card {
