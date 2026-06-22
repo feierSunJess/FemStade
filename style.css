@@ -62,6 +62,10 @@ ul { list-style: none; padding: 0; }
 .container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--section-y); }
 .section--tint { background: var(--bg-tint); }
+.section--dark { background: var(--violet-deep); color: var(--white); }
+.section--dark h2, .section--dark h3 { color: var(--white); }
+.section--dark .kicker { color: var(--coral); }
+.section--dark .kicker::before { background: var(--white); }
 .muted { color: var(--text-soft); font-size: .95rem; }
 
 /* ---------- Typo ---------- */
@@ -88,7 +92,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 .kicker--coral::before { background: var(--violet); }
 
 .section__head { max-width: 760px; margin-bottom: clamp(2rem, 4vw, 3.25rem); }
-.section__title { font-size: clamp(1.9rem, 4.5vw, 3.1rem); }
+.section__title { font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.1; }
 .section__title--sm { font-size: clamp(1.6rem, 3.2vw, 2.25rem); margin-bottom: 1.25rem; }
 .section__sub { margin-top: 1rem; font-size: 1.08rem; color: var(--text-soft); max-width: 60ch; }
 .section__outro { margin-top: 2.5rem; font-size: 1.12rem; font-weight: 500; max-width: 60ch; }
@@ -285,11 +289,13 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 /* ---------- Kein Platz für ---------- */
 .noplace__grid { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-bottom: 2.5rem; }
 .noplace__grid span {
-  font-weight: 500; font-size: .98rem;
-  padding: .6rem 1.2rem; border-radius: var(--radius);
-  border: 1px solid var(--border); color: var(--violet-deep);
+  font-weight: 600; font-size: 1rem;
+  padding: .75rem 1.4rem; border-radius: var(--radius);
+  border: 2px solid rgba(255,255,255,.35); color: var(--white);
   position: relative;
+  transition: border-color .2s, background .2s;
 }
+.noplace__grid span:hover { border-color: var(--coral); background: rgba(255,255,255,.07); }
 .noplace__grid span::before {
   content: "✕"; color: var(--coral); font-weight: 700; margin-right: .5rem;
 }
