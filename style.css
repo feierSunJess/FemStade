@@ -319,8 +319,8 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 .list + .muted { margin-top: 1.4rem; }
 
 /* ---------- Kein Platz für ---------- */
-.noplace__layout { display: grid; grid-template-columns: 280px 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.noplace__img img { width: 100%; height: auto; display: block; }
+.noplace__layout { display: grid; grid-template-columns: clamp(300px, 42vw, 520px) 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.noplace__img img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
 .noplace__grid { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: flex-start; margin-bottom: 2.5rem; }
 .noplace__grid span {
   font-weight: 600; font-size: 1rem;
@@ -462,7 +462,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   .vision__bg-img { width: clamp(200px, 60vw, 320px); opacity: .1; right: -10%; }
   .bubbles { justify-content: center; }
   .noplace__layout { grid-template-columns: 1fr; }
-  .noplace__img { max-width: 220px; margin-inline: auto; }
+  .noplace__img { max-width: 320px; margin-inline: auto; }
   .noplace__grid { justify-content: center; }
   .insta-banner { flex-direction: column; text-align: center; }
   .insta-banner__btn { width: 100%; justify-content: center; }
