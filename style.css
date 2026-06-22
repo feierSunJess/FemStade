@@ -149,11 +149,11 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 /* ---------- Hero (Vollbild, Text unten links) ---------- */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 85vh;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .hero__visual {
@@ -174,7 +174,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to left,
+    to right,
     rgba(251, 250, 252, 1) 35%,
     rgba(251, 250, 252, 0.6) 55%,
     transparent 70%
@@ -189,7 +189,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(3rem, 5vw, 5rem) clamp(3rem, 6vw, 6rem) clamp(3rem, 5vw, 5rem) clamp(1rem, 3vw, 3rem);
+  padding: clamp(3rem, 5vw, 5rem) clamp(1rem, 2vw, 2rem) clamp(3rem, 5vw, 5rem) clamp(4rem, 8vw, 8rem);
 }
 
 .hero__title { margin-bottom: .6rem; line-height: 1; }
