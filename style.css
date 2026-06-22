@@ -176,8 +176,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   flex-direction: column;
   align-items: flex-start;
   padding: clamp(3rem, 5vw, 5rem) clamp(3rem, 5vw, 5rem) clamp(3rem, 5vw, 5rem) clamp(2rem, 3vw, 3rem);
-  background: rgba(251, 250, 252, 0.92);
-  backdrop-filter: blur(2px);
+  background: linear-gradient(to right, transparent, rgba(251,250,252,.85) 40%, rgba(251,250,252,.97) 100%);
 }
 
 .hero__title { margin-bottom: .6rem; line-height: 1; }
