@@ -57,6 +57,19 @@
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie-Hinweis" hidden>
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">
+        Diese Website verwendet technisch notwendige Cookies. Wir nutzen kein Tracking, keine Werbung, keine Analyse-Tools. Deine Daten gehören dir.
+        <a href="datenschutz/">Datenschutzerklärung</a>
+      </p>
+      <div class="cookie-banner__actions">
+        <button class="btn btn--primary btn--sm" id="cookieAccept">Verstanden</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Preloader -->
   <div class="preloader" id="preloader" aria-hidden="true">
     <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.png" alt="" class="preloader__logo">
@@ -361,5 +374,16 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="main.js"></script>
+  <script>
+    (function() {
+      var banner = document.getElementById('cookieBanner');
+      var btn = document.getElementById('cookieAccept');
+      if (!localStorage.getItem('cookieOk')) banner.removeAttribute('hidden');
+      btn.addEventListener('click', function() {
+        localStorage.setItem('cookieOk', '1');
+        banner.setAttribute('hidden', '');
+      });
+    })();
+  </script>
 </body>
 </html>
