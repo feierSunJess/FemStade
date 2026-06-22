@@ -269,6 +269,25 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 .projekte-text { display: flex; flex-direction: column; gap: 1.1rem; padding-top: .5rem; }
 .projekte-text p { font-size: 1.05rem; line-height: 1.75; color: var(--text-soft); max-width: 52ch; }
 
+.projekte-story {
+  display: grid;
+  grid-template-columns: clamp(180px, 28vw, 340px) 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--border);
+}
+.projekte-story__img { display: flex; align-items: center; justify-content: center; }
+.projekte-story__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+.projekte-story__text { display: flex; flex-direction: column; gap: 1.1rem; }
+.projekte-story__text p { font-size: 1.05rem; line-height: 1.75; color: var(--text-soft); }
+
 /* ---------- Tags (legacy, nicht mehr in Nutzung) ---------- */
 .tags { display: flex; flex-wrap: wrap; gap: .85rem; justify-content: center; margin-top: 2.5rem; }
 .tags li {
@@ -427,6 +446,8 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   .insta-banner__btn { width: 100%; justify-content: center; }
   .contact { grid-template-columns: 1fr; }
   .projekte-grid { grid-template-columns: 1fr; }
+  .projekte-story { grid-template-columns: 1fr; }
+  .projekte-story__photo { max-width: 280px; margin-inline: auto; }
 
   .nav__toggle { display: flex; position: relative; z-index: 1200; }
   .nav__menu {
