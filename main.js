@@ -158,20 +158,45 @@
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
-      // Basis-Validierung (Browser übernimmt das meiste via required)
+      e.preventDefault();
+
       if (!form.checkValidity()) {
-        e.preventDefault();
         form.reportValidity();
         return;
       }
-      // Honeypot: gefüllt = Bot -> stillschweigend abbrechen
+
       var hp = form.querySelector('[name="website"]');
-      if (hp && hp.value) { e.preventDefault(); return; }
+      if (hp && hp.value) return;
 
       if (status) {
         status.textContent = "Wird gesendet …";
         status.className = "form__status";
       }
+
+      var data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            if (status) {
+              status.textContent = "Danke — wir haben deine Nachricht erhalten und melden uns bald!";
+              status.className = "form__status is-ok";
+            }
+          } else {
+            throw new Error("server");
+          }
+        })
+        .catch(function () {
+          if (status) {
+            status.textContent = "Etwas hat nicht geklappt. Schreib uns direkt an info@femstade.de.";
+            status.className = "form__status is-err";
+          }
+        });
     });
   }
 })();
