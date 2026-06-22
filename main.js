@@ -168,17 +168,6 @@
       var hp = form.querySelector('[name="website"]');
       if (hp && hp.value) { e.preventDefault(); return; }
 
-      // Solange noch der Platzhalter-Endpoint drin steht: nicht absenden,
-      // sondern Hinweis zeigen. Sobald die echte nforms-ID gesetzt ist,
-      // greift der normale POST-Submit.
-      if (form.action.indexOf("PLATZHALTER-FORM-ID") !== -1) {
-        e.preventDefault();
-        if (status) {
-          status.textContent = "Formular ist noch nicht final verbunden (nforms-ID fehlt). Schreib uns solange direkt an info@femstade.de.";
-          status.className = "form__status is-err";
-        }
-        return;
-      }
       if (status) {
         status.textContent = "Wird gesendet …";
         status.className = "form__status";

@@ -224,18 +224,46 @@
           <p class="section__sub">Wir sind ein Verein in Gründung. Eine Mitgliedschaft wird bald möglich sein — bis dahin: melde dich, komm vorbei, sei dabei. Schreib uns, wenn du mitmachen, mitdenken oder einfach mehr erfahren möchtest.</p>
         </div>
 
-        <div class="contact-simple" data-reveal>
-          <ul class="contact__links">
-            <li>
-              <span class="contact__label">E-Mail</span>
-              <a href="mailto:info@femstade.de" class="contact__link-big">info@femstade.de</a>
-            </li>
-            <li>
-              <span class="contact__label">Instagram</span>
-              <a href="https://instagram.com/fem.stade" target="_blank" rel="noopener" class="contact__link-big">@FEM.STADE</a>
-            </li>
-          </ul>
-          <p class="contact__note">Du planst eine Aktion, hast eine Idee oder willst dich einfach vernetzen? Genau dafür sind wir da. Schreib uns eine Mail oder komm auf Instagram vorbei.</p>
+        <div class="contact" data-reveal>
+          <form class="contact__form" id="contactForm" action="https://nforms.eu/4a627909-9fe8-4a38-99aa-3e461aa9a4c6" method="POST" novalidate data-reveal="left">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="message">Nachricht</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="field field--hp" aria-hidden="true">
+              <label for="website">Website (bitte frei lassen)</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field field--check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten einverstanden.</label>
+            </div>
+            <button type="submit" class="btn btn--primary" data-magnet>Nachricht senden</button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact__info" data-reveal="right">
+            <h3>Direkt erreichen</h3>
+            <ul class="contact__links">
+              <li>
+                <span class="contact__label">E-Mail</span>
+                <a href="mailto:info@femstade.de">info@femstade.de</a>
+              </li>
+              <li>
+                <span class="contact__label">Instagram</span>
+                <a href="https://instagram.com/fem.stade" target="_blank" rel="noopener">@FEM.STADE</a>
+              </li>
+            </ul>
+            <p class="contact__note">Du planst eine Aktion, hast eine Idee oder willst dich einfach vernetzen? Genau dafür sind wir da.</p>
+          </aside>
         </div>
       </div>
     </section>
