@@ -65,6 +65,7 @@
         <a href="datenschutz/">Datenschutzerklärung</a>
       </p>
       <div class="cookie-banner__actions">
+        <button class="btn btn--ghost btn--sm" id="cookieDecline">Ablehnen</button>
         <button class="btn btn--primary btn--sm" id="cookieAccept">Verstanden</button>
       </div>
     </div>
@@ -378,11 +379,13 @@
   <script>
     (function() {
       var banner = document.getElementById('cookieBanner');
-      var btn = document.getElementById('cookieAccept');
+      function closeBanner() { banner.setAttribute('hidden', ''); }
       if (!localStorage.getItem('cookieOk')) banner.removeAttribute('hidden');
-      btn.addEventListener('click', function() {
-        localStorage.setItem('cookieOk', '1');
-        banner.setAttribute('hidden', '');
+      document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem('cookieOk', '1'); closeBanner();
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function() {
+        localStorage.setItem('cookieOk', '0'); closeBanner();
       });
     })();
   </script>
