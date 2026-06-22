@@ -223,7 +223,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 .bubbles li {
   font-family: var(--ff-head); font-weight: 600; font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--white); background: var(--violet);
-  padding: .85rem 1.8rem; border-radius: 999px;
+  padding: .9rem 1.7rem; border-radius: var(--radius);
   box-shadow: 0 4px 18px rgba(91,30,142,.22);
   transition: transform .25s, background .25s, box-shadow .25s;
   cursor: default;
