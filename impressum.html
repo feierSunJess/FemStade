@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum — FEM Stade</title>
+  <meta name="description" content="Impressum des Vereins FEM Stade (in Gründung).">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="FEMStade_Logo.png">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: var(--violet-deep);
+      padding-block: clamp(3rem, 7vw, 5.5rem);
+      color: #fff;
+    }
+    .page-hero .kicker { color: rgba(255,255,255,.6); }
+    .page-hero .kicker::before { background: var(--coral); }
+    .page-hero__title {
+      font-family: var(--ff-head);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      color: #fff;
+      margin-top: .5rem;
+      letter-spacing: -.02em;
+    }
+    .page-hero__sub {
+      margin-top: .8rem;
+      color: rgba(255,255,255,.65);
+      font-size: 1.05rem;
+      max-width: 55ch;
+    }
+
+    .legal-body {
+      padding-block: clamp(3rem, 7vw, 5rem);
+    }
+    .legal-body .container {
+      max-width: 860px;
+    }
+    .legal-section {
+      padding-block: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-of-type {
+      border-bottom: none;
+    }
+    .legal-section h2 {
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      color: var(--violet-deep);
+      margin-bottom: .9rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .legal-section h2::before {
+      content: "";
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: var(--coral);
+      flex-shrink: 0;
+    }
+    .legal-section p { max-width: 72ch; margin-bottom: .85rem; line-height: 1.7; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section a { color: var(--violet); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-section a:hover { color: var(--coral); }
+
+    .legal-note {
+      background: var(--violet-soft);
+      border-left: 4px solid var(--coral);
+      padding: 1.1rem 1.4rem;
+      border-radius: var(--radius);
+      font-size: .93rem;
+      color: var(--text-soft);
+      margin-bottom: 2.5rem;
+    }
+    .legal-note mark {
+      background: #ffedb3;
+      padding: 0 .2em;
+      border-radius: 2px;
+      font-style: normal;
+    }
+
+    .legal-contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+      display: inline-block;
+      min-width: 280px;
+    }
+    .legal-contact-card strong {
+      display: block;
+      font-size: 1.08rem;
+      color: var(--violet-deep);
+      margin-bottom: .35rem;
+    }
+    .legal-contact-card .muted { font-size: .88rem; }
+    .legal-contact-card a { color: var(--violet); }
+
+    .legal-back {
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="FEM Stade — zur Startseite">
+        <img src="FEMStade_Logo.png" alt="FEM Stade" class="site-header__logo">
+      </a>
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="index.html#wer-wir-sind">Wer wir sind</a></li>
+          <li><a href="index.html#vision">Vision</a></li>
+          <li><a href="index.html#projekte">Was wir bewegen</a></li>
+          <li><a href="index.html#fuer-wen">Für wen</a></li>
+          <li><a href="index.html#kontakt" class="btn btn--primary btn--sm">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker">Rechtliches</span>
+        <h1 class="page-hero__title">Impressum</h1>
+        <p class="page-hero__sub">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+      </div>
+    </section>
+
+    <!-- Inhalt -->
+    <div class="legal-body">
+      <div class="container">
+
+        <p class="legal-note">
+          <strong>Vorlage — bitte vor Veröffentlichung ausfüllen:</strong><br>
+          Alle <mark>[in eckigen Klammern markierten]</mark> Stellen mit den finalen Vereinsdaten ersetzen und rechtlich prüfen lassen.
+        </p>
+
+        <div class="legal-section">
+          <h2>Verantwortliche Organisation</h2>
+          <div class="legal-contact-card">
+            <strong>FEM Stade</strong>
+            <span class="muted">Verein in Gründung</span>
+            <br><br>
+            [Straße und Hausnummer]<br>
+            [PLZ] Stade<br>
+            Deutschland
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h2>Vertreten durch</h2>
+          <p>[Vor- und Nachname der vertretungsberechtigten Person(en)]</p>
+          <p class="muted">Als Verein in Gründung: Angabe der Gründungsverantwortlichen / des Gründungsvorstands.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>Kontakt</h2>
+          <p>
+            E-Mail: <a href="mailto:info@femstade.de">info@femstade.de</a><br>
+            Telefon: [optional — z. B. Mobilnummer einer Ansprechperson]
+          </p>
+        </div>
+
+        <div class="legal-section">
+          <h2>Registereintrag</h2>
+          <p class="muted">Sobald die Eintragung erfolgt ist:</p>
+          <p>
+            Eintragung im Vereinsregister.<br>
+            Registergericht: [Amtsgericht]<br>
+            Registernummer: [VR-Nummer]
+          </p>
+        </div>
+
+        <div class="legal-section">
+          <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+          <p>
+            [Vor- und Nachname]<br>
+            [Anschrift wie oben]
+          </p>
+        </div>
+
+        <div class="legal-section">
+          <h2>Haftung für Inhalte</h2>
+          <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>Haftung für Links</h2>
+          <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>Urheberrecht</h2>
+          <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung.</p>
+        </div>
+
+        <div class="legal-back">
+          <a href="index.html" class="btn btn--ghost btn--sm">← Zurück zur Startseite</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="FEMStade_Logo.png" alt="FEM Stade" class="site-footer__logo">
+        <p class="site-footer__claim">Laut. Solidarisch. Feministisch.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Rechtliches und Social">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="https://instagram.com/fem.stade" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:info@femstade.de">info@femstade.de</a>
+      </nav>
+    </div>
+    <p class="site-footer__copy">© <span id="year">2026</span> FEM Stade · Verein in Gründung</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

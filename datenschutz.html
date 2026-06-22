@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung — FEM Stade</title>
+  <meta name="description" content="Datenschutzerklärung des Vereins FEM Stade (in Gründung).">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="FEMStade_Logo.png">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: var(--violet-deep);
+      padding-block: clamp(3rem, 7vw, 5.5rem);
+      color: #fff;
+    }
+    .page-hero .kicker { color: rgba(255,255,255,.6); }
+    .page-hero .kicker::before { background: var(--coral); }
+    .page-hero__title {
+      font-family: var(--ff-head);
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      color: #fff;
+      margin-top: .5rem;
+      letter-spacing: -.02em;
+    }
+    .page-hero__sub {
+      margin-top: .8rem;
+      color: rgba(255,255,255,.65);
+      font-size: 1.05rem;
+      max-width: 55ch;
+    }
+
+    .legal-body {
+      padding-block: clamp(3rem, 7vw, 5rem);
+    }
+    .legal-body .container {
+      max-width: 860px;
+    }
+    .legal-section {
+      padding-block: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-of-type {
+      border-bottom: none;
+    }
+    .legal-section h2 {
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      color: var(--violet-deep);
+      margin-bottom: .9rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .legal-section h2::before {
+      content: "";
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: var(--coral);
+      flex-shrink: 0;
+    }
+    .legal-section p { max-width: 72ch; margin-bottom: .85rem; line-height: 1.7; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section a { color: var(--violet); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-section a:hover { color: var(--coral); }
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: .5rem 0 .85rem;
+      max-width: 72ch;
+    }
+    .legal-section ul li {
+      padding-left: 1.4rem;
+      margin-bottom: .45rem;
+      position: relative;
+      line-height: 1.65;
+    }
+    .legal-section ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .6em;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: var(--coral);
+      opacity: .6;
+    }
+
+    .legal-note {
+      background: var(--violet-soft);
+      border-left: 4px solid var(--coral);
+      padding: 1.1rem 1.4rem;
+      border-radius: var(--radius);
+      font-size: .93rem;
+      color: var(--text-soft);
+      margin-bottom: 2.5rem;
+    }
+    .legal-note mark {
+      background: #ffedb3;
+      padding: 0 .2em;
+      border-radius: 2px;
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: .85rem;
+      margin-top: .75rem;
+    }
+    .rights-grid__item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: .9rem 1rem;
+      font-size: .95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+    }
+    .rights-grid__item::before {
+      content: "✓";
+      color: var(--coral);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .legal-back {
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="FEM Stade — zur Startseite">
+        <img src="FEMStade_Logo.png" alt="FEM Stade" class="site-header__logo">
+      </a>
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="index.html#wer-wir-sind">Wer wir sind</a></li>
+          <li><a href="index.html#vision">Vision</a></li>
+          <li><a href="index.html#projekte">Was wir bewegen</a></li>
+          <li><a href="index.html#fuer-wen">Für wen</a></li>
+          <li><a href="index.html#kontakt" class="btn btn--primary btn--sm">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker">Rechtliches</span>
+        <h1 class="page-hero__title">Datenschutz&shy;erklärung</h1>
+        <p class="page-hero__sub">Wir nehmen den Schutz deiner persönlichen Daten ernst.</p>
+      </div>
+    </section>
+
+    <!-- Inhalt -->
+    <div class="legal-body">
+      <div class="container">
+
+        <p class="legal-note">
+          <strong>Vorlage — bitte vor Veröffentlichung prüfen:</strong><br>
+          Alle <mark>[markierten]</mark> Stellen anpassen und rechtlich absichern. Diese Vorlage ersetzt keine Rechtsberatung.
+        </p>
+
+        <div class="legal-section">
+          <h2>1. Verantwortliche Stelle</h2>
+          <p>
+            FEM Stade (Verein in Gründung)<br>
+            [Straße und Hausnummer], [PLZ] Stade<br>
+            E-Mail: <a href="mailto:info@femstade.de">info@femstade.de</a><br>
+            Vertreten durch: [Name der vertretungsberechtigten Person(en)]
+          </p>
+        </div>
+
+        <div class="legal-section">
+          <h2>2. Allgemeines zur Datenverarbeitung</h2>
+          <p>Wir verarbeiten personenbezogene Daten nur im Rahmen der gesetzlichen Bestimmungen (DSGVO, BDSG). Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Eine Nutzung unserer Website ist grundsätzlich ohne Angabe personenbezogener Daten möglich.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>3. Hosting (All-Inkl / Server-Logfiles)</h2>
+          <p>Diese Website wird bei der ALL-INKL.COM – Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf gehostet. Beim Aufruf der Website erhebt der Provider automatisch Informationen in sogenannten Server-Logfiles:</p>
+          <ul>
+            <li>IP-Adresse (soweit möglich anonymisiert)</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Aufgerufene Seite / Datei</li>
+            <li>Verwendeter Browser und Betriebssystem</li>
+            <li>Referrer-URL</li>
+          </ul>
+          <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem technisch fehlerfreien, sicheren Betrieb). Mit dem Provider besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>4. Kontaktformular und Kontaktaufnahme</h2>
+          <p>Wenn du uns über das Kontaktformular oder per E-Mail kontaktierst, werden die von dir angegebenen Daten (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung deiner Anfrage gespeichert und verarbeitet. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sowie unser berechtigtes Interesse an der Beantwortung (Art. 6 Abs. 1 lit. f DSGVO).</p>
+          <p><strong>Formular-Dienstleister:</strong> Für die Übermittlung des Kontaktformulars nutzen wir den Dienst <strong>nForms</strong> (<a href="https://nforms.eu" target="_blank" rel="noopener">nforms.eu</a>, [Anbieterangaben aus deinem nforms-Account ergänzen]). Die im Formular eingegebenen Daten werden zur Zustellung an uns verarbeitet. Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag (Art. 28 DSGVO).</p>
+          <p>Deine Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>5. Instagram / Social Media</h2>
+          <p>Auf unserer Website verlinken wir auf unser Instagram-Profil (@FEM.STADE). Es handelt sich um eine reine Verlinkung — erst durch Klick gelangst du zu Instagram (Meta Platforms Ireland Ltd.). Beim Besuch des Profils gelten die Datenschutzbestimmungen von Meta. Durch die Verlinkung selbst werden keine Daten an Meta übertragen.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>6. Schriftarten</h2>
+          <p>Diese Website verwendet die Schriftarten <em>Playfair Display</em> und <em>Montserrat</em>. Die Schriftdateien sind lokal auf unserem Server gespeichert und werden nicht von Drittservern geladen. Es werden keine Daten an externe Anbieter übertragen.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>7. Deine Rechte</h2>
+          <p>Du hast jederzeit folgende Rechte in Bezug auf deine personenbezogenen Daten:</p>
+          <div class="rights-grid">
+            <div class="rights-grid__item">Auskunft (Art. 15 DSGVO)</div>
+            <div class="rights-grid__item">Berichtigung (Art. 16 DSGVO)</div>
+            <div class="rights-grid__item">Löschung (Art. 17 DSGVO)</div>
+            <div class="rights-grid__item">Einschränkung (Art. 18 DSGVO)</div>
+            <div class="rights-grid__item">Datenübertragbarkeit (Art. 20 DSGVO)</div>
+            <div class="rights-grid__item">Widerspruch (Art. 21 DSGVO)</div>
+            <div class="rights-grid__item">Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)</div>
+            <div class="rights-grid__item">Beschwerde bei einer Aufsichtsbehörde</div>
+          </div>
+          <p style="margin-top:1.1rem">Zuständige Aufsichtsbehörde: <strong>Die Landesbeauftragte für den Datenschutz Niedersachsen</strong>.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>8. Aktualität</h2>
+          <p>Stand dieser Datenschutzerklärung: <strong>[Monat/Jahr]</strong>. Durch die Weiterentwicklung unserer Website oder geänderte gesetzliche Vorgaben kann eine Anpassung erforderlich werden.</p>
+        </div>
+
+        <div class="legal-back">
+          <a href="index.html" class="btn btn--ghost btn--sm">← Zurück zur Startseite</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="FEMStade_Logo.png" alt="FEM Stade" class="site-footer__logo">
+        <p class="site-footer__claim">Laut. Solidarisch. Feministisch.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Rechtliches und Social">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="https://instagram.com/fem.stade" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:info@femstade.de">info@femstade.de</a>
+      </nav>
+    </div>
+    <p class="site-footer__copy">© <span id="year">2026</span> FEM Stade · Verein in Gründung</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
