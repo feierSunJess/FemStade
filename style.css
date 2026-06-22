@@ -48,19 +48,6 @@ a { color: var(--violet); text-decoration: none; }
 ul { list-style: none; padding: 0; }
 :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 2px; }
 
-/* ---------- Lila Außenrahmen ums Layout ---------- */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 14px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  pointer-events: none;
-  z-index: 900;
-}
-@media (max-width: 600px) {
-  body::before { inset: 8px; }
-}
 
 /* ---------- Skip-Link ---------- */
 .skip-link {
@@ -233,7 +220,49 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 .card__num { font-family: var(--ff-head); font-weight: 700; font-size: 1.6rem; color: var(--coral); display: block; margin-bottom: .6rem; }
 .card p { font-weight: 500; font-size: 1.05rem; }
 
-/* ---------- Tags (Projekte) ---------- */
+/* ---------- Vision Bubbles ---------- */
+.bubbles { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2.5rem; }
+.bubbles li {
+  font-family: var(--ff-head); font-weight: 600; font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--white); background: var(--violet);
+  padding: .85rem 1.8rem; border-radius: 999px;
+  box-shadow: 0 4px 18px rgba(91,30,142,.22);
+  transition: transform .25s, background .25s, box-shadow .25s;
+  cursor: default;
+}
+.bubbles li:nth-child(even) { background: var(--coral); box-shadow: 0 4px 18px rgba(232,84,44,.22); }
+.bubbles li:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 8px 28px rgba(68,22,107,.28); }
+
+/* ---------- Projekte Grid (Was wir bewegen) ---------- */
+.projekte-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  margin-top: 2.5rem;
+}
+.projekte-list { display: flex; flex-direction: column; gap: 1.4rem; }
+.projekte-list li {
+  display: flex; flex-direction: column; gap: .35rem;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+}
+.projekte-list li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.projekte-list strong {
+  font-family: var(--ff-head); font-weight: 700; font-size: 1.05rem;
+  color: var(--violet-deep); display: flex; align-items: center; gap: .6rem;
+}
+.projekte-list strong::before {
+  content: ""; display: inline-block; width: .5rem; height: .5rem;
+  border-radius: 50%; background: var(--coral); flex-shrink: 0;
+}
+.projekte-list span { font-size: .97rem; color: var(--text-soft); line-height: 1.6; }
+.projekte-text { display: flex; flex-direction: column; gap: 1.1rem; padding-top: .5rem; }
+.projekte-text p { font-size: 1.05rem; line-height: 1.75; color: var(--text-soft); max-width: 52ch; }
+
+/* ---------- Tags (legacy, nicht mehr in Nutzung) ---------- */
 .tags { display: flex; flex-wrap: wrap; gap: .85rem; justify-content: center; margin-top: 2.5rem; }
 .tags li {
   font-family: var(--ff-head); font-weight: 600; font-size: clamp(1.05rem, 2.2vw, 1.45rem);
@@ -268,6 +297,13 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 }
 
 /* ---------- Kontakt ---------- */
+.contact-simple { max-width: 600px; margin-inline: auto; text-align: center; }
+.contact-simple .contact__links { display: flex; flex-direction: column; gap: 1.8rem; margin-bottom: 2rem; }
+.contact-simple .contact__label { display: block; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-soft); margin-bottom: .3rem; }
+.contact__link-big { font-family: var(--ff-head); font-weight: 700; font-size: clamp(1.3rem, 3vw, 1.9rem); color: var(--violet-deep); transition: color .2s; }
+.contact__link-big:hover { color: var(--coral); }
+.contact-simple .contact__note { color: var(--text-soft); font-size: .98rem; border-left: 3px solid var(--coral); padding-left: 1rem; text-align: left; margin-top: 1rem; }
+
 .contact { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
 .contact__form {
   background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg);
@@ -357,6 +393,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   .section__head { margin-inline: auto; text-align: center; }
   .split { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
+  .projekte-grid { grid-template-columns: 1fr; }
 
   .nav__toggle { display: flex; }
   .nav__menu {

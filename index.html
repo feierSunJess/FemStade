@@ -106,29 +106,14 @@
           <span class="kicker">Unsere Vision</span>
           <h2 class="section__title">Ein Ort, an dem Menschen …</h2>
         </div>
-        <ul class="cards">
-          <li class="card" data-reveal>
-            <span class="card__num">01</span>
-            <p>sich austauschen und vernetzen können</p>
-          </li>
-          <li class="card" data-reveal>
-            <span class="card__num">02</span>
-            <p>Unterstützung und Solidarität erfahren</p>
-          </li>
-          <li class="card" data-reveal>
-            <span class="card__num">03</span>
-            <p>sichtbar werden und ihre Stimme erheben können</p>
-          </li>
-          <li class="card" data-reveal>
-            <span class="card__num">04</span>
-            <p>feministische Perspektiven kennenlernen</p>
-          </li>
-          <li class="card" data-reveal>
-            <span class="card__num">05</span>
-            <p>gemeinsam gesellschaftliche Veränderungen anstoßen</p>
-          </li>
+        <ul class="bubbles" data-reveal>
+          <li>sich austauschen und vernetzen</li>
+          <li>Unterstützung und Solidarität erfahren</li>
+          <li>sichtbar werden und ihre Stimme erheben</li>
+          <li>feministische Perspektiven kennenlernen</li>
+          <li>gesellschaftliche Veränderungen anstoßen</li>
+          <li>Kraft für eigene Positionen finden</li>
         </ul>
-        <p class="section__outro" data-reveal>Wir wollen Frauen* und marginalisierte Menschen stärken, politische Bildungsarbeit leisten und feministische Themen in die Öffentlichkeit tragen.</p>
       </div>
     </section>
 
@@ -139,16 +124,40 @@
           <span class="kicker">Was wir bewegen wollen</span>
           <h2 class="section__title">Aus einer Aktion wurde eine <em>Bewegung</em></h2>
         </div>
-        <p class="prose prose--center" data-reveal>Aus einer Aktion zum Frauenstreik entstand die Idee für FEM Stade. Jetzt stellen wir gemeinsam Projekte und Veranstaltungen auf die Beine:</p>
-        <ul class="tags" data-reveal>
-          <li>Workshops &amp; Vorträge</li>
-          <li>Internationaler Frauentag</li>
-          <li>Tag gegen Gewalt an Frauen</li>
-          <li>Feministische Walpurgisnacht</li>
-          <li>Vernetzungstreffen</li>
-          <li>Politische Bildungsangebote</li>
-          <li>Kreative &amp; kulturelle Aktionen</li>
-        </ul>
+        <div class="projekte-grid">
+          <ul class="projekte-list" data-reveal="left">
+            <li>
+              <strong>Workshops &amp; Vorträge</strong>
+              <span>Wissen teilen, Fragen stellen, gemeinsam lernen — zu feministischen Themen, politischer Bildung und mehr.</span>
+            </li>
+            <li>
+              <strong>Internationaler Frauentag</strong>
+              <span>Jedes Jahr am 8. März auf die Straße — mit Aktionen, Reden und Solidarität.</span>
+            </li>
+            <li>
+              <strong>Tag gegen Gewalt an Frauen</strong>
+              <span>Am 25. November setzen wir ein sichtbares Zeichen gegen jede Form von Gewalt.</span>
+            </li>
+            <li>
+              <strong>Feministische Walpurgisnacht</strong>
+              <span>Eine Tradition neu gedacht — laut, bunt, feministisch. Die Nacht gehört uns.</span>
+            </li>
+            <li>
+              <strong>Vernetzungstreffen</strong>
+              <span>Regelmäßige Planungstreffen für alle, die mitmachen, mitdenken und mitgestalten wollen.</span>
+            </li>
+            <li>
+              <strong>Kreative &amp; kulturelle Aktionen</strong>
+              <span>Feminismus ist auch Kunst, Kultur und Widerstand — wir bringen ihn in den öffentlichen Raum.</span>
+            </li>
+          </ul>
+          <div class="projekte-text" data-reveal="right">
+            <p>Aus einer Aktion zum Frauenstreik entstand die Idee für FEM Stade. Was als ein Abend begann, wurde zu einer Bewegung.</p>
+            <p>Wir glauben daran, dass Veränderung vor der eigenen Haustür anfängt. In Stade. Jetzt. Mit Menschen, die nicht nur reden, sondern handeln.</p>
+            <p>Feministische Arbeit heißt für uns: sichtbar sein, laut sein, füreinander da sein — und das immer wieder neu auf die Beine stellen.</p>
+            <a href="#kontakt" class="btn btn--primary" style="margin-top:1.5rem" data-magnet>Mitmachen</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -215,51 +224,18 @@
           <p class="section__sub">Wir sind ein Verein in Gründung. Eine Mitgliedschaft wird bald möglich sein — bis dahin: melde dich, komm vorbei, sei dabei. Schreib uns, wenn du mitmachen, mitdenken oder einfach mehr erfahren möchtest.</p>
         </div>
 
-        <div class="contact">
-          <form class="contact__form" id="contactForm" action="https://nforms.eu/PLATZHALTER-FORM-ID" method="POST" novalidate data-reveal="left">
-            <div class="field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="email">E-Mail</label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="message">Nachricht</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <!-- Honeypot gegen Spam -->
-            <div class="field field--hp" aria-hidden="true">
-              <label for="website">Website (bitte frei lassen)</label>
-              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-            </div>
-            <div class="field field--check">
-              <input type="checkbox" id="consent" name="consent" required>
-              <label for="consent">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage einverstanden.</label>
-            </div>
-            <button type="submit" class="btn btn--primary" data-magnet>Nachricht senden</button>
-            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-
-          <aside class="contact__info" data-reveal="right">
-            <h3>Direkt erreichen</h3>
-            <ul class="contact__links">
-              <li>
-                <span class="contact__label">E-Mail</span>
-                <a href="mailto:info@femstade.de">info@femstade.de</a>
-              </li>
-              <li>
-                <span class="contact__label">Instagram</span>
-                <a href="https://instagram.com/fem.stade" target="_blank" rel="noopener">@FEM.STADE</a>
-              </li>
-              <li>
-                <span class="contact__label">Web</span>
-                <a href="https://femstade.de">www.femstade.de</a>
-              </li>
-            </ul>
-            <p class="contact__note">Du planst eine Aktion, hast eine Idee oder willst dich einfach vernetzen? Genau dafür sind wir da.</p>
-          </aside>
+        <div class="contact-simple" data-reveal>
+          <ul class="contact__links">
+            <li>
+              <span class="contact__label">E-Mail</span>
+              <a href="mailto:info@femstade.de" class="contact__link-big">info@femstade.de</a>
+            </li>
+            <li>
+              <span class="contact__label">Instagram</span>
+              <a href="https://instagram.com/fem.stade" target="_blank" rel="noopener" class="contact__link-big">@FEM.STADE</a>
+            </li>
+          </ul>
+          <p class="contact__note">Du planst eine Aktion, hast eine Idee oder willst dich einfach vernetzen? Genau dafür sind wir da. Schreib uns eine Mail oder komm auf Instagram vorbei.</p>
         </div>
       </div>
     </section>
