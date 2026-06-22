@@ -351,6 +351,9 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 .site-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
 .site-footer__logo { height: 54px; width: auto; filter: brightness(0) invert(1); }
 .site-footer__claim { font-family: var(--ff-head); font-style: italic; font-size: 1.15rem; margin-top: .8rem; color: #f0e7f8; }
+.site-footer__address { display: flex; flex-direction: column; gap: .3rem; font-style: normal; font-size: .9rem; color: #ece2f6; }
+.site-footer__address a { color: #ece2f6; font-weight: 500; }
+.site-footer__address a:hover { color: var(--coral-light); }
 .site-footer__nav { display: flex; gap: 1.8rem; flex-wrap: wrap; }
 .site-footer__nav a { color: #ece2f6; font-weight: 500; }
 .site-footer__nav a:hover { color: var(--coral-light); }
