@@ -33,7 +33,7 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   font-family: var(--ff-body);
   font-weight: 400;
@@ -439,7 +439,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   .section__head { margin-inline: auto; text-align: center; }
   .split { grid-template-columns: 1fr; }
   .vision__layout { grid-template-columns: 1fr; }
-  .vision__img { width: 100%; max-height: none; overflow: visible; }
+  .vision__img { width: 100%; max-height: none; }
   .vision__img img { max-height: 280px; object-fit: contain; }
   .bubbles { justify-content: center; }
   .noplace__layout { grid-template-columns: 1fr; }
