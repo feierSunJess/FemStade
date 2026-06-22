@@ -271,7 +271,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 
 .projekte-story {
   display: grid;
-  grid-template-columns: clamp(180px, 28vw, 340px) 1fr;
+  grid-template-columns: clamp(260px, 38vw, 480px) 1fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
   margin-top: clamp(2.5rem, 5vw, 4rem);
