@@ -267,6 +267,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 }
 .projekte-list span { font-size: .97rem; color: var(--text-soft); line-height: 1.6; }
 .projekte-text { display: flex; flex-direction: column; gap: 1.1rem; padding-top: .5rem; }
+.projekte-text__title { font-family: var(--ff-head); font-size: clamp(1.3rem, 2.5vw, 1.7rem); color: var(--violet-deep); margin-bottom: .25rem; }
 .projekte-text p { font-size: 1.05rem; line-height: 1.75; color: var(--text-soft); max-width: 52ch; }
 
 .projekte-story {
