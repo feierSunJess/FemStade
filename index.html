@@ -73,14 +73,14 @@
 
   <!-- Preloader -->
   <div class="preloader" id="preloader" aria-hidden="true">
-    <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.png" alt="" class="preloader__logo">
+    <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.webp" alt="" class="preloader__logo">
   </div>
 
   <!-- Header -->
   <header class="site-header" id="siteHeader">
     <div class="container site-header__inner">
       <a href="#hero" class="site-header__brand" aria-label="FEM Stade · zur Startseite">
-        <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.png" alt="FEM Stade" class="site-header__logo">
+        <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.webp" alt="FEM Stade" class="site-header__logo">
       </a>
       <nav class="nav" aria-label="Hauptnavigation">
         <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menü öffnen">
@@ -103,13 +103,15 @@
     <section class="hero" id="hero">
       <div class="hero__visual">
         <picture>
+          <source media="(max-width: 880px)" type="image/webp" srcset="Bilder_WebsiteFEMStade/Femstade_Herobildmobil.webp">
           <source media="(max-width: 880px)" srcset="Bilder_WebsiteFEMStade/Femstade_Herobildmobil.png">
-          <img src="Bilder_WebsiteFEMStade/Femstade_Herobild.png" alt="Eine vielfältige Gruppe selbstbewusster Frauen verschiedenen Alters und unterschiedlicher Herkunft steht zusammen, eine hebt kämpferisch die Faust." class="hero__img">
+          <source type="image/webp" srcset="Bilder_WebsiteFEMStade/Femstade_Herobild.webp">
+          <img src="Bilder_WebsiteFEMStade/Femstade_Herobild.png" alt="Eine vielfältige Gruppe selbstbewusster Frauen verschiedenen Alters und unterschiedlicher Herkunft steht zusammen, eine hebt kämpferisch die Faust." class="hero__img" fetchpriority="high" decoding="async">
         </picture>
       </div>
       <div class="hero__content" data-reveal="left">
         <h1 class="hero__title">
-          <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.png" alt="FEM Stade" class="hero__logo">
+          <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.webp" alt="FEM Stade" class="hero__logo">
         </h1>
         <p class="hero__eyebrow">Feministischer Verein in Gründung · Stade</p>
         <p class="hero__claim">Laut. Solidarisch. Feministisch.</p>
@@ -169,7 +171,7 @@
             </ul>
           </div>
           <div class="vision__img" data-reveal="right">
-            <img src="Bilder_WebsiteFEMStade/FEMStade_Hands.png" alt="Hände verschiedener Frauen übereinander gelegt als Zeichen von Solidarität">
+            <img src="Bilder_WebsiteFEMStade/FEMStade_Hands.webp" loading="lazy" decoding="async" alt="Hände verschiedener Frauen übereinander gelegt als Zeichen von Solidarität">
           </div>
         </div>
       </div>
@@ -259,7 +261,7 @@
       <div class="container">
         <div class="noplace__layout">
           <div class="noplace__img" data-reveal="left">
-            <img src="Bilder_WebsiteFEMStade/FEMStade_keinPlatzfuer.png" alt="Hand hält Schild mit Aufschrift: Hier kein Platz für...">
+            <img src="Bilder_WebsiteFEMStade/FEMStade_keinPlatzfuer.webp" loading="lazy" decoding="async" alt="Hand hält Schild mit Aufschrift: Hier kein Platz für...">
           </div>
           <div class="noplace__content">
             <div class="section__head" data-reveal>
@@ -357,7 +359,7 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
-        <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.png" alt="FEM Stade" class="site-footer__logo">
+        <img src="Bilder_WebsiteFEMStade/FEMStade_Logo.webp" alt="FEM Stade" class="site-footer__logo">
         <p class="site-footer__claim">Laut. Solidarisch. Feministisch.</p>
       </div>
       <address class="site-footer__address">
