@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danke! — FEM Stade</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="FEMStade_Logo.png">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .danke {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(3rem, 8vw, 6rem) var(--gutter);
+    }
+    .danke__inner { max-width: 520px; }
+    .danke__icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .danke__title {
+      font-family: var(--ff-head);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--violet-deep);
+      margin-bottom: 1rem;
+    }
+    .danke__text {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="FEM Stade — zur Startseite">
+        <img src="FEMStade_Logo.png" alt="FEM Stade" class="site-header__logo">
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="danke">
+      <div class="danke__inner">
+        <span class="danke__icon">💜</span>
+        <h1 class="danke__title">Danke für deine Nachricht!</h1>
+        <p class="danke__text">Wir haben deine Nachricht erhalten und melden uns so bald wie möglich bei dir. Wir freuen uns, dass du dabei sein möchtest.</p>
+        <a href="index.html" class="btn btn--primary">Zurück zur Startseite</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
