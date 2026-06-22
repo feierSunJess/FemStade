@@ -148,48 +148,31 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
 
 /* ---------- Hero (Vollbild, Text unten links) ---------- */
 .hero {
-  position: relative;
-  min-height: 85vh;
-  overflow: hidden;
+  min-height: 55vh;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .hero__visual {
-  position: absolute;
-  inset: 0;
+  flex: 0 0 75%;
+  overflow: hidden;
 }
 .hero__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: 62% bottom;
   display: block;
 }
 
-/* Gradient rechts — Text frei, Frauen links sichtbar */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(251, 250, 252, 1) 35%,
-    rgba(251, 250, 252, 0.6) 55%,
-    transparent 70%
-  );
-  z-index: 1;
-}
-
 .hero__content {
-  position: relative;
-  z-index: 2;
-  width: 40%;
+  flex: 0 0 25%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(3rem, 5vw, 5rem) clamp(1rem, 2vw, 2rem) clamp(3rem, 5vw, 5rem) clamp(4rem, 8vw, 8rem);
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 4rem) clamp(2rem, 4vw, 4rem) clamp(2rem, 4vw, 4rem) clamp(2rem, 3vw, 3rem);
+  background: var(--bg, #fbfafc);
 }
 
 .hero__title { margin-bottom: .6rem; line-height: 1; }
@@ -394,8 +377,9 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
    ========================================================= */
 @media (max-width: 880px) {
   /* Hero auf Mobile: gestapelt, Bild oben */
-  .hero { min-height: 100svh; }
-  .hero__content { width: 100%; padding: 2rem var(--gutter) 3rem; text-align: center; align-items: center; }
+  .hero { min-height: auto; flex-direction: column; }
+  .hero__visual { flex: none; width: 100%; height: 55vw; min-height: 260px; }
+  .hero__content { flex: none; width: 100%; padding: 2rem var(--gutter) 3rem; text-align: center; align-items: center; background: var(--bg, #fbfafc); }
   .hero__logo { margin-inline: auto; }
   .kicker { padding-left: 0; }
   .kicker::before { display: none; }
