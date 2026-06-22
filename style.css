@@ -285,6 +285,7 @@ em { font-style: italic; color: var(--coral); font-family: var(--ff-head); }
   display: block;
   mix-blend-mode: multiply;
 }
+.projekte-story--noimg { grid-template-columns: 1fr; max-width: 72ch; }
 .projekte-story__text { display: flex; flex-direction: column; gap: 1.1rem; }
 .projekte-story__title { font-family: var(--ff-head); font-size: clamp(1.3rem, 2.5vw, 1.7rem); color: var(--violet-deep); margin-bottom: .25rem; }
 .projekte-story__text p { font-size: 1.05rem; line-height: 1.75; color: var(--text-soft); }
