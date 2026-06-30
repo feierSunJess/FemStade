@@ -168,4 +168,15 @@
       // Normaler POST-Submit → nForms leitet zu danke.html weiter
     });
   }
+
+  /* ---------- Inhaltsschutz ---------- */
+  document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  document.addEventListener("keydown", function (e) {
+    // F12, Strg+Shift+I/J/C/U, Strg+U
+    if (e.key === "F12") { e.preventDefault(); return; }
+    if (e.ctrlKey && e.shiftKey && ["I","i","J","j","C","c"].indexOf(e.key) !== -1) { e.preventDefault(); return; }
+    if (e.ctrlKey && ["u","U"].indexOf(e.key) !== -1) { e.preventDefault(); }
+  });
+  document.addEventListener("selectstart", function (e) { e.preventDefault(); });
+  document.addEventListener("dragstart", function (e) { e.preventDefault(); });
 })();
