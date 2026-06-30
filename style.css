@@ -33,7 +33,8 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; overflow-x: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-touch-callout: none; }
+@media print { body { display: none !important; } }
 body {
   font-family: var(--ff-body);
   font-weight: 400;

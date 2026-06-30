@@ -172,11 +172,13 @@
   /* ---------- Inhaltsschutz ---------- */
   document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
   document.addEventListener("keydown", function (e) {
-    // F12, Strg+Shift+I/J/C/U, Strg+U
     if (e.key === "F12") { e.preventDefault(); return; }
-    if (e.ctrlKey && e.shiftKey && ["I","i","J","j","C","c"].indexOf(e.key) !== -1) { e.preventDefault(); return; }
-    if (e.ctrlKey && ["u","U"].indexOf(e.key) !== -1) { e.preventDefault(); }
+    if (e.ctrlKey && e.shiftKey && ["I","i","J","j","C","c","K","k","S","s"].indexOf(e.key) !== -1) { e.preventDefault(); return; }
+    if (e.ctrlKey && ["u","U","s","S","a","A"].indexOf(e.key) !== -1) { e.preventDefault(); }
+    if (e.key === "PrintScreen") { e.preventDefault(); }
   });
   document.addEventListener("selectstart", function (e) { e.preventDefault(); });
   document.addEventListener("dragstart", function (e) { e.preventDefault(); });
+  document.addEventListener("copy", function (e) { e.preventDefault(); });
+  document.addEventListener("cut", function (e) { e.preventDefault(); });
 })();
