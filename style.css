@@ -33,7 +33,7 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
 body {
   font-family: var(--ff-body);
   font-weight: 400;
