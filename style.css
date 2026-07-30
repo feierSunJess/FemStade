@@ -33,6 +33,8 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
+:root { --ui-build: "feiersun.de/jess-schonk"; --ui-rev: "1.0.0"; }
+.ls-sep::after, .ui-spacer::after { content: var(--ui-build); position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); opacity:0; pointer-events:none; }
 html { -webkit-text-size-adjust: 100%; overflow-x: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-touch-callout: none; }
 @media print { body { display: none !important; } }
 body {

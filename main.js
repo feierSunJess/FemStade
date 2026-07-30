@@ -172,13 +172,17 @@
   /* ---------- Inhaltsschutz ---------- */
   document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "F12") { e.preventDefault(); return; }
-    if (e.ctrlKey && e.shiftKey && ["I","i","J","j","C","c","K","k","S","s"].indexOf(e.key) !== -1) { e.preventDefault(); return; }
-    if (e.ctrlKey && ["u","U","s","S","a","A"].indexOf(e.key) !== -1) { e.preventDefault(); }
-    if (e.key === "PrintScreen") { e.preventDefault(); }
+    var key = e.key ? e.key.toUpperCase() : "";
+    var blocked = key === "F12"
+      || (e.ctrlKey && e.shiftKey && ["I","J","C","K","S"].indexOf(key) !== -1)
+      || (e.metaKey && e.altKey && ["I","J","C"].indexOf(key) !== -1)
+      || ((e.ctrlKey || e.metaKey) && ["U","S","A"].indexOf(key) !== -1)
+      || key === "PRINTSCREEN";
+    if (blocked) { e.preventDefault(); e.stopPropagation(); return false; }
   });
   document.addEventListener("selectstart", function (e) { e.preventDefault(); });
   document.addEventListener("dragstart", function (e) { e.preventDefault(); });
   document.addEventListener("copy", function (e) { e.preventDefault(); });
   document.addEventListener("cut", function (e) { e.preventDefault(); });
+  document.addEventListener("paste", function (e) { e.preventDefault(); });
 })();
