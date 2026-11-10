@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilfe &amp; Krisentelefone — FEM Stade</title>
+  <meta name="description" content="Hilfetelefone und Krisenhotlines für Frauen in Stade und bundesweit. Kostenlos, anonym, rund um die Uhr.">
+  <link rel="icon" type="image/png" href="../FEMStade_Logo.png">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .hilfe-hero {
+      background: var(--violet-deep);
+      padding: clamp(3rem, 6vw, 5rem) var(--gutter) clamp(2rem, 4vw, 3rem);
+      text-align: center;
+    }
+    .hilfe-hero__logo {
+      width: clamp(120px, 25%, 180px);
+      height: auto;
+      display: block;
+      margin: 0 auto 2rem;
+      filter: brightness(0) invert(1);
+    }
+    .hilfe-hero__title {
+      font-family: var(--ff-head);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .hilfe-hero__sub {
+      color: rgba(255,255,255,0.8);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .hilfe-section {
+      padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.75rem;
+      cursor: default;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(68,22,107,0.18);
+      border-color: var(--violet-deep);
+      background: #f5f0fb;
+    }
+    .card--emergency {
+      border-color: var(--coral);
+    }
+    .card--emergency:hover {
+      border-color: var(--coral);
+      background: #fff5f2;
+      box-shadow: 0 16px 40px rgba(220,80,60,0.15);
+    }
+
+    .card__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--coral);
+    }
+    .card--emergency .card__label {
+      color: var(--coral);
+    }
+
+    .card__name {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--violet-deep);
+      line-height: 1.25;
+    }
+
+    .card__hours {
+      font-size: 0.85rem;
+      color: var(--muted, #888);
+      line-height: 1.4;
+    }
+
+    .card__number {
+      font-family: var(--ff-head);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--violet-deep);
+      margin-top: auto;
+      padding-top: 0.75rem;
+      letter-spacing: 0.03em;
+    }
+    .card--emergency .card__number {
+      color: var(--coral);
+    }
+
+    .card__link {
+      font-size: 0.8rem;
+      color: var(--violet-mid, var(--violet-deep));
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-top: 0.25rem;
+    }
+
+    .hilfe-notice {
+      margin-top: 3rem;
+      background: var(--violet-deep);
+      color: #fff;
+      border-radius: 1.25rem;
+      padding: 1.75rem 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .hilfe-notice__icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .hilfe-notice__text {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.92);
+    }
+    .hilfe-notice__text strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .hilfe-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--violet-deep);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+    .hilfe-back:hover { opacity: 1; }
+
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+      .hilfe-notice { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hilfe-hero">
+    <a href="../">
+      <img src="../FEMStade_Logo.png" alt="FEM Stade" class="hilfe-hero__logo">
+    </a>
+    <h1 class="hilfe-hero__title">Hilfe &amp; Krisentelefone</h1>
+    <p class="hilfe-hero__sub">Du bist nicht allein. Hier findest du Anlaufstellen, die zuhören — kostenlos, anonym und ohne Voranmeldung.</p>
+  </div>
+
+  <section class="hilfe-section">
+    <a href="../" class="hilfe-back">← Zurück zur Startseite</a>
+
+    <div class="cards">
+
+      <div class="card card--emergency">
+        <span class="card__label">Notruf</span>
+        <span class="card__name">Polizei Notruf</span>
+        <span class="card__hours">immer erreichbar</span>
+        <span class="card__number">110</span>
+      </div>
+
+      <div class="card card--emergency">
+        <span class="card__label">Notruf</span>
+        <span class="card__name">Rettungsdienst Notruf</span>
+        <span class="card__hours">immer erreichbar</span>
+        <span class="card__number">112</span>
+      </div>
+
+      <div class="card">
+        <span class="card__label">Gewalt gegen Frauen</span>
+        <span class="card__name">Hilfetelefon Gewalt gegen Frauen</span>
+        <span class="card__hours">rund um die Uhr · anonym · mehrsprachig</span>
+        <span class="card__number">116 016</span>
+        <a class="card__link" href="https://www.hilfetelefon.de" target="_blank" rel="noopener">hilfetelefon.de</a>
+      </div>
+
+      <div class="card">
+        <span class="card__label">Lokale Hilfe · Stade</span>
+        <span class="card__name">Stader Frauenhaus</span>
+        <span class="card__hours">Mo–Do 9–16 Uhr · Fr 9–14 Uhr<br>Aufnahme in Notfällen rund um die Uhr</span>
+        <span class="card__number">04141 44123</span>
+      </div>
+
+      <div class="card">
+        <span class="card__label">Sexueller Missbrauch</span>
+        <span class="card__name">Hilfetelefon Sexueller Missbrauch</span>
+        <span class="card__hours">Mo, Mi, Fr 9–14 Uhr<br>Di, Do 15–20 Uhr</span>
+        <span class="card__number">0800 22 55 530</span>
+      </div>
+
+      <div class="card">
+        <span class="card__label">Seelsorge &amp; Krise</span>
+        <span class="card__name">Telefonseelsorge</span>
+        <span class="card__hours">rund um die Uhr · kostenlos · anonym</span>
+        <span class="card__number">116 123</span>
+        <a class="card__link" href="https://www.telefonseelsorge.de" target="_blank" rel="noopener">telefonseelsorge.de</a>
+      </div>
+
+      <div class="card">
+        <span class="card__label">Gewalt an Männern</span>
+        <span class="card__name">Hilfetelefon Gewalt an Männern</span>
+        <span class="card__hours">Beratung für männliche Betroffene · kostenlos</span>
+        <span class="card__number">0800 123 99 00</span>
+      </div>
+
+      <div class="card">
+        <span class="card__label">Nach Straftaten</span>
+        <span class="card__name">Weißer Ring Opfer-Telefon</span>
+        <span class="card__hours">täglich 7–22 Uhr · kostenlos</span>
+        <span class="card__number">116 006</span>
+        <a class="card__link" href="https://www.weisser-ring.de" target="_blank" rel="noopener">weisser-ring.de</a>
+      </div>
+
+    </div>
+
+    <div class="hilfe-notice">
+      <span class="hilfe-notice__icon">⚠️</span>
+      <p class="hilfe-notice__text">
+        <strong>Wird dein Handy kontrolliert?</strong>
+        Lösche nach dem Anruf den Anrufverlauf oder ruf von einem anderen Telefon an. Du kannst diese Seite auch im privaten Modus öffnen — dann wird sie nicht im Browserverlauf gespeichert.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> FEM Stade</p>
+      <nav class="footer__links">
+        <a href="../impressum/">Impressum</a>
+        <a href="../datenschutz/">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    var y = document.getElementById("year");
+    if (y) y.textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
