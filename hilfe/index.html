@@ -51,7 +51,6 @@
       line-height: 1.65;
     }
 
-    /* Venus-Symbol mit Faust */
     .hilfe-hero__symbol {
       flex: 0 0 auto;
       width: clamp(160px, 25vw, 300px);
@@ -89,6 +88,32 @@
     }
     .hilfe-back:hover { opacity: 1; }
 
+    /* ---- FILTER ---- */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .filter-btn {
+      padding: 0.45rem 1.1rem;
+      border-radius: 2rem;
+      border: 2px solid #e8e3f0;
+      background: #fff;
+      color: var(--violet-deep);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .filter-btn:hover { border-color: var(--violet-deep); }
+    .filter-btn.active {
+      background: var(--violet-deep);
+      border-color: var(--violet-deep);
+      color: #fff;
+    }
+    .filter-btn[data-filter="notruf"].active { background: var(--coral); border-color: var(--coral); }
+
     /* ---- CARDS ---- */
     .cards {
       display: grid;
@@ -104,7 +129,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -113,6 +138,7 @@
     }
     .card--emergency { border-color: var(--coral); }
     .card--emergency:hover { border-color: var(--coral); box-shadow: 0 14px 36px rgba(200,60,30,0.14); }
+    .card.hidden { display: none; }
 
     .card__label {
       font-size: 0.7rem;
@@ -199,23 +225,31 @@
       <p class="hilfe-hero__sub">Hilfe, wenn du Gewalt erlebst oder dir jemand Sorgen macht. Alle Nummern sind vertraulich. Bis auf das Stader Frauenhaus sind sie kostenfrei.</p>
     </div>
 
-    <!-- Venus-Symbol mit Faust -->
     <img class="hilfe-hero__symbol" src="venus-faust.webp" alt="" aria-hidden="true">
   </div>
 
   <section class="hilfe-section">
     <a href="../" class="hilfe-back">← Zurück zur Startseite</a>
 
+    <div class="filter-bar" role="group" aria-label="Kategorie filtern">
+      <button class="filter-btn active" data-filter="alle">Alle</button>
+      <button class="filter-btn" data-filter="notruf">Notruf</button>
+      <button class="filter-btn" data-filter="gewalt">Gewalt &amp; Schutz</button>
+      <button class="filter-btn" data-filter="seelsorge">Seelsorge</button>
+      <button class="filter-btn" data-filter="unterwegs">Unterwegs</button>
+      <button class="filter-btn" data-filter="lokal">Lokal Stade</button>
+    </div>
+
     <div class="cards">
 
-      <div class="card card--emergency">
+      <div class="card card--emergency" data-category="notruf gewalt">
         <span class="card__label">Notruf</span>
         <span class="card__name">Polizei &amp; Rettungsdienst</span>
         <span class="card__hours">immer erreichbar</span>
         <a class="card__number" href="tel:110">110 / 112</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="gewalt">
         <span class="card__label">Gewalt gegen Frauen</span>
         <span class="card__name">Hilfetelefon Gewalt gegen Frauen</span>
         <span class="card__hours">rund um die Uhr · anonym · mehrsprachig</span>
@@ -223,21 +257,21 @@
         <a class="card__link" href="https://www.hilfetelefon.de" target="_blank" rel="noopener">hilfetelefon.de</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="lokal gewalt">
         <span class="card__label">Lokale Hilfe · Stade</span>
         <span class="card__name">Stader Frauenhaus</span>
         <span class="card__hours">Mo–Do 9–16 Uhr · Fr 9–14 Uhr<br>Aufnahme in Notfällen rund um die Uhr</span>
         <a class="card__number" href="tel:0414144123">04141 44123</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="gewalt">
         <span class="card__label">Sexueller Missbrauch</span>
         <span class="card__name">Hilfetelefon Sexueller Missbrauch</span>
         <span class="card__hours">Mo, Mi, Fr 9–14 Uhr<br>Di, Do 15–20 Uhr</span>
         <a class="card__number" href="tel:080022555530">0800 22 55 530</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="seelsorge">
         <span class="card__label">Seelsorge &amp; Krise</span>
         <span class="card__name">Telefonseelsorge</span>
         <span class="card__hours">rund um die Uhr · kostenlos · anonym</span>
@@ -245,14 +279,14 @@
         <a class="card__link" href="https://www.telefonseelsorge.de" target="_blank" rel="noopener">telefonseelsorge.de</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="gewalt">
         <span class="card__label">Gewalt an Männern</span>
         <span class="card__name">Hilfetelefon Gewalt an Männern</span>
         <span class="card__hours">Beratung für männliche Betroffene · kostenlos</span>
         <a class="card__number" href="tel:0800123990">0800 123 99 00</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="gewalt">
         <span class="card__label">Nach Straftaten</span>
         <span class="card__name">Weißer Ring Opfer-Telefon</span>
         <span class="card__hours">täglich 7–22 Uhr · kostenlos</span>
@@ -260,7 +294,7 @@
         <a class="card__link" href="https://www.weisser-ring.de" target="_blank" rel="noopener">weisser-ring.de</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="unterwegs">
         <span class="card__label">Sicherer Heimweg</span>
         <span class="card__name">Heimweg Telefon</span>
         <span class="card__hours">So–Do 21–24 Uhr · Fr &amp; Sa 21–03 Uhr</span>
@@ -268,14 +302,14 @@
         <a class="card__link" href="https://www.heimwegtelefon.de" target="_blank" rel="noopener">heimwegtelefon.de</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="notruf unterwegs">
         <span class="card__label">Stiller Notruf · App</span>
         <span class="card__name">NORA – Notruf-App</span>
         <span class="card__hours">Notruf ohne Sprache · Standort direkt an Polizei · kostenlos</span>
         <a class="card__link card__link--app" href="https://www.nora-notruf.de" target="_blank" rel="noopener">→ nora-notruf.de (App herunterladen)</a>
       </div>
 
-      <div class="card">
+      <div class="card" data-category="unterwegs">
         <span class="card__label">Wenn du nicht „Nein" sagen kannst</span>
         <span class="card__name">NoA – Nummer ohne Anruf</span>
         <span class="card__hours">Gib diese Nummer, wenn jemand nicht locker lässt. Du bekommst innerhalb von 20 Min. eine Antwort — und solltest dann gehen.</span>
@@ -306,6 +340,25 @@
   <script>
     var y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
+
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.card[data-category]');
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        cards.forEach(function(card) {
+          if (filter === 'alle') {
+            card.classList.remove('hidden');
+          } else {
+            var cats = card.getAttribute('data-category').split(' ');
+            card.classList.toggle('hidden', !cats.includes(filter));
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
