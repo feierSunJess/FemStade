@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Du bist nicht allein — FEM Stade</title>
   <meta name="description" content="Hilfetelefone und Krisenkontakte für Frauen in Stade und bundesweit. Kostenlos, anonym, rund um die Uhr.">
-  <link rel="icon" type="image/png" href="../FEMStade_Logo.png">
+  <link rel="icon" type="image/png" href="../Bilder_WebsiteFEMStade/FEMStade_Logo.webp">
   <link rel="stylesheet" href="../fonts/fonts.css">
   <link rel="stylesheet" href="../style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
   <style>
     /* ---- HERO ---- */
     .hilfe-hero {
@@ -31,18 +31,18 @@
       filter: brightness(0) invert(1);
     }
     .hilfe-hero__title {
-      font-family: 'Oswald', var(--ff-head), sans-serif;
+      font-family: 'Times New Roman', Times, Georgia, serif;
       font-size: clamp(3rem, 8vw, 6rem);
       font-weight: 700;
       color: #fff;
       line-height: 0.95;
       margin-bottom: 1.25rem;
       letter-spacing: -0.01em;
-      text-transform: uppercase;
     }
     .hilfe-hero__title em {
       font-style: italic;
       color: #f5e6d0;
+      font-family: 'Times New Roman', Times, Georgia, serif;
     }
     .hilfe-hero__sub {
       color: rgba(255,255,255,0.82);
@@ -54,10 +54,11 @@
     /* Venus-Symbol mit Faust */
     .hilfe-hero__symbol {
       flex: 0 0 auto;
-      width: clamp(140px, 22vw, 260px);
-      opacity: 0.92;
+      width: clamp(160px, 25vw, 300px);
+      opacity: 0.9;
       position: relative;
       z-index: 1;
+      filter: brightness(0) invert(1);
     }
 
     @media (max-width: 680px) {
@@ -186,31 +187,14 @@
   <div class="hilfe-hero">
     <div class="hilfe-hero__content">
       <a href="../">
-        <img src="../FEMStade_Logo.png" alt="FEM Stade" class="hilfe-hero__logo">
+        <img src="../Bilder_WebsiteFEMStade/FEMStade_Logo.webp" alt="FEM Stade" class="hilfe-hero__logo">
       </a>
       <h1 class="hilfe-hero__title">Du bist<br>nicht <em>allein.</em></h1>
       <p class="hilfe-hero__sub">Hilfe, wenn du Gewalt erlebst oder dir jemand Sorgen macht. Alle Nummern sind vertraulich. Bis auf das Stader Frauenhaus sind sie kostenfrei.</p>
     </div>
 
     <!-- Venus-Symbol mit Faust -->
-    <svg class="hilfe-hero__symbol" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- Kreis (Venus oben) -->
-      <circle cx="100" cy="90" r="78" fill="none" stroke="white" stroke-width="10"/>
-      <!-- Kreuz unten (Venus-Symbol) -->
-      <line x1="100" y1="168" x2="100" y2="240" stroke="white" stroke-width="10" stroke-linecap="round"/>
-      <line x1="68" y1="210" x2="132" y2="210" stroke="white" stroke-width="10" stroke-linecap="round"/>
-      <!-- Faust: Finger -->
-      <rect x="68" y="52" width="13" height="30" rx="6.5" fill="white"/>
-      <rect x="84" y="45" width="13" height="37" rx="6.5" fill="white"/>
-      <rect x="100" y="47" width="13" height="35" rx="6.5" fill="white"/>
-      <rect x="116" y="52" width="13" height="30" rx="6.5" fill="white"/>
-      <!-- Faust: Handfläche -->
-      <rect x="64" y="78" width="70" height="32" rx="9" fill="white"/>
-      <!-- Faust: Daumen -->
-      <rect x="50" y="88" width="20" height="14" rx="7" fill="white"/>
-      <!-- Faust: Handgelenk -->
-      <rect x="74" y="106" width="50" height="18" rx="6" fill="white"/>
-    </svg>
+    <img class="hilfe-hero__symbol" src="venus-faust.webp" alt="" aria-hidden="true">
   </div>
 
   <section class="hilfe-section">
