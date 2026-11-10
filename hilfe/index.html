@@ -3,172 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hilfe &amp; Krisentelefone — FEM Stade</title>
-  <meta name="description" content="Hilfetelefone und Krisenhotlines für Frauen in Stade und bundesweit. Kostenlos, anonym, rund um die Uhr.">
+  <title>Du bist nicht allein — FEM Stade</title>
+  <meta name="description" content="Hilfetelefone und Krisenkontakte für Frauen in Stade und bundesweit. Kostenlos, anonym, rund um die Uhr.">
   <link rel="icon" type="image/png" href="../FEMStade_Logo.png">
   <link rel="stylesheet" href="../fonts/fonts.css">
   <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@700&display=swap" rel="stylesheet">
   <style>
+    /* ---- HERO ---- */
     .hilfe-hero {
       background: var(--violet-deep);
-      padding: clamp(3rem, 6vw, 5rem) var(--gutter) clamp(2.5rem, 5vw, 4rem);
-      text-align: center;
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem);
       position: relative;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      min-height: 42vh;
     }
-    .hilfe-hero__faust {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
-      width: clamp(80px, 12vw, 130px);
-      opacity: 0.18;
-    }
+    .hilfe-hero__content { flex: 1; position: relative; z-index: 2; }
+
     .hilfe-hero__logo {
-      width: clamp(140px, 28%, 220px);
+      width: clamp(130px, 22%, 200px);
       height: auto;
       display: block;
-      margin: 0 auto 1.5rem;
+      margin-bottom: 1.5rem;
       filter: brightness(0) invert(1);
     }
     .hilfe-hero__title {
-      font-family: var(--ff-head);
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.05;
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
-    .hilfe-hero__badge {
-      display: inline-block;
-      background: var(--coral);
-      color: #fff;
+      font-family: 'Oswald', var(--ff-head), sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
       font-weight: 700;
-      font-size: clamp(0.85rem, 1.5vw, 1rem);
-      letter-spacing: 0.04em;
-      padding: 0.4rem 1.2rem;
-      border-radius: 2rem;
+      color: #fff;
+      line-height: 0.95;
       margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .hilfe-hero__title em {
+      font-style: italic;
+      color: #f5e6d0;
     }
     .hilfe-hero__sub {
-      color: rgba(255,255,255,0.8);
-      font-size: clamp(1rem, 2vw, 1.1rem);
-      max-width: 560px;
-      margin: 0 auto;
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      max-width: 480px;
       line-height: 1.65;
     }
 
+    /* Venus-Symbol mit Faust */
+    .hilfe-hero__symbol {
+      flex: 0 0 auto;
+      width: clamp(140px, 22vw, 260px);
+      opacity: 0.92;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 680px) {
+      .hilfe-hero { flex-direction: column; text-align: center; min-height: auto; }
+      .hilfe-hero__logo { margin-inline: auto; }
+      .hilfe-hero__sub { margin-inline: auto; }
+      .hilfe-hero__symbol { width: clamp(100px, 40vw, 160px); order: -1; }
+    }
+
+    /* ---- SECTION ---- */
     .hilfe-section {
-      padding: clamp(3rem, 6vw, 5rem) var(--gutter);
-      max-width: 900px;
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem);
+      max-width: 960px;
       margin: 0 auto;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .card {
-      background: var(--bg);
-      border: 2px solid var(--border);
-      border-radius: 1.25rem;
-      padding: 1.5rem 1.75rem;
-      cursor: default;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(68,22,107,0.18);
-      border-color: var(--violet-deep);
-      background: #f5f0fb;
-    }
-    .card--emergency {
-      border-color: var(--coral);
-    }
-    .card--emergency:hover {
-      border-color: var(--coral);
-      background: #fff5f2;
-      box-shadow: 0 16px 40px rgba(220,80,60,0.15);
-    }
-
-    .card__label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--coral);
-    }
-    .card--emergency .card__label {
-      color: var(--coral);
-    }
-
-    .card__name {
-      font-family: var(--ff-head);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--violet-deep);
-      line-height: 1.25;
-    }
-
-    .card__hours {
-      font-size: 0.85rem;
-      color: var(--muted, #888);
-      line-height: 1.4;
-    }
-
-    .card__number {
-      font-family: var(--ff-head);
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700;
-      color: var(--violet-deep);
-      margin-top: auto;
-      padding-top: 0.75rem;
-      letter-spacing: 0.03em;
-      text-decoration: none;
-    }
-    .card__number:hover { text-decoration: underline; text-underline-offset: 4px; }
-    .card--emergency .card__number {
-      color: var(--coral);
-    }
-
-    .card__link {
-      font-size: 0.8rem;
-      color: var(--violet-mid, var(--violet-deep));
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      margin-top: 0.25rem;
-    }
-
-    .hilfe-notice {
-      margin-top: 3rem;
-      background: var(--violet-deep);
-      color: #fff;
-      border-radius: 1.25rem;
-      padding: 1.75rem 2rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .hilfe-notice__icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-    .hilfe-notice__text {
-      font-size: 0.95rem;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.92);
-    }
-    .hilfe-notice__text strong {
-      color: #fff;
-      display: block;
-      margin-bottom: 0.3rem;
-      font-size: 1rem;
     }
 
     .hilfe-back {
@@ -180,10 +83,97 @@
       font-size: 0.9rem;
       text-decoration: none;
       margin-bottom: 2rem;
-      opacity: 0.75;
+      opacity: 0.65;
       transition: opacity 0.2s;
     }
     .hilfe-back:hover { opacity: 1; }
+
+    /* ---- CARDS ---- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 2px solid #e8e3f0;
+      border-radius: 1rem;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 36px rgba(68,22,107,0.16);
+      border-color: var(--violet-deep);
+    }
+    .card--emergency { border-color: var(--coral); }
+    .card--emergency:hover { border-color: var(--coral); box-shadow: 0 14px 36px rgba(200,60,30,0.14); }
+
+    .card__label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coral);
+    }
+    .card__name {
+      font-family: var(--ff-head);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--violet-deep);
+      line-height: 1.2;
+    }
+    .card__hours {
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.45;
+    }
+    .card__number {
+      font-family: 'Oswald', var(--ff-head), sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: var(--violet-deep);
+      margin-top: auto;
+      padding-top: 0.6rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .card--emergency .card__number { color: var(--coral); }
+    .card__number:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .card__link {
+      font-size: 0.78rem;
+      color: var(--violet-deep);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      opacity: 0.7;
+    }
+    .card__link:hover { opacity: 1; }
+
+    /* ---- NOTICE ---- */
+    .hilfe-notice {
+      margin-top: 2.5rem;
+      background: var(--coral);
+      color: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .hilfe-notice svg { flex-shrink: 0; margin-top: 0.15rem; }
+    .hilfe-notice__text {
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    .hilfe-notice__text strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
 
     @media (max-width: 600px) {
       .cards { grid-template-columns: 1fr; }
@@ -194,29 +184,33 @@
 <body>
 
   <div class="hilfe-hero">
-    <!-- Feministische Faust im Kreis -->
-    <svg class="hilfe-hero__faust" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- Äußerer Kreis -->
-      <circle cx="100" cy="100" r="90" fill="none" stroke="white" stroke-width="8"/>
-      <!-- Faust: Finger oben -->
-      <rect x="62" y="52" width="16" height="38" rx="8" fill="white"/>
-      <rect x="82" y="44" width="16" height="46" rx="8" fill="white"/>
-      <rect x="102" y="46" width="16" height="44" rx="8" fill="white"/>
-      <rect x="122" y="52" width="16" height="38" rx="8" fill="white"/>
-      <!-- Faust: Handfläche -->
-      <rect x="60" y="84" width="80" height="38" rx="10" fill="white"/>
-      <!-- Faust: Daumen -->
-      <rect x="44" y="96" width="22" height="16" rx="8" fill="white"/>
-      <!-- Faust: Handgelenk -->
-      <rect x="72" y="118" width="56" height="22" rx="6" fill="white"/>
-    </svg>
+    <div class="hilfe-hero__content">
+      <a href="../">
+        <img src="../FEMStade_Logo.png" alt="FEM Stade" class="hilfe-hero__logo">
+      </a>
+      <h1 class="hilfe-hero__title">Du bist<br>nicht <em>allein.</em></h1>
+      <p class="hilfe-hero__sub">Hilfe, wenn du Gewalt erlebst oder dir jemand Sorgen macht. Alle Nummern sind vertraulich. Bis auf das Stader Frauenhaus sind sie kostenfrei.</p>
+    </div>
 
-    <a href="../">
-      <img src="../FEMStade_Logo.png" alt="FEM Stade" class="hilfe-hero__logo">
-    </a>
-    <span class="hilfe-hero__badge">Feministischer Verein · Stade</span>
-    <h1 class="hilfe-hero__title">Hilfe &amp;<br>Krisenkontakte</h1>
-    <p class="hilfe-hero__sub">Du bist nicht allein. Hier findest du Anlaufstellen, die zuhören — kostenlos, anonym und ohne Voranmeldung.</p>
+    <!-- Venus-Symbol mit Faust -->
+    <svg class="hilfe-hero__symbol" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Kreis (Venus oben) -->
+      <circle cx="100" cy="90" r="78" fill="none" stroke="white" stroke-width="10"/>
+      <!-- Kreuz unten (Venus-Symbol) -->
+      <line x1="100" y1="168" x2="100" y2="240" stroke="white" stroke-width="10" stroke-linecap="round"/>
+      <line x1="68" y1="210" x2="132" y2="210" stroke="white" stroke-width="10" stroke-linecap="round"/>
+      <!-- Faust: Finger -->
+      <rect x="68" y="52" width="13" height="30" rx="6.5" fill="white"/>
+      <rect x="84" y="45" width="13" height="37" rx="6.5" fill="white"/>
+      <rect x="100" y="47" width="13" height="35" rx="6.5" fill="white"/>
+      <rect x="116" y="52" width="13" height="30" rx="6.5" fill="white"/>
+      <!-- Faust: Handfläche -->
+      <rect x="64" y="78" width="70" height="32" rx="9" fill="white"/>
+      <!-- Faust: Daumen -->
+      <rect x="50" y="88" width="20" height="14" rx="7" fill="white"/>
+      <!-- Faust: Handgelenk -->
+      <rect x="74" y="106" width="50" height="18" rx="6" fill="white"/>
+    </svg>
   </div>
 
   <section class="hilfe-section">
@@ -226,16 +220,9 @@
 
       <div class="card card--emergency">
         <span class="card__label">Notruf</span>
-        <span class="card__name">Polizei Notruf</span>
+        <span class="card__name">Polizei &amp; Rettungsdienst</span>
         <span class="card__hours">immer erreichbar</span>
-        <a class="card__number" href="tel:110">110</a>
-      </div>
-
-      <div class="card card--emergency">
-        <span class="card__label">Notruf</span>
-        <span class="card__name">Rettungsdienst Notruf</span>
-        <span class="card__hours">immer erreichbar</span>
-        <a class="card__number" href="tel:112">112</a>
+        <a class="card__number" href="tel:110">110 / 112</a>
       </div>
 
       <div class="card">
@@ -286,7 +273,7 @@
     </div>
 
     <div class="hilfe-notice">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:.1rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <p class="hilfe-notice__text">
         <strong>Wird dein Handy kontrolliert?</strong>
         Lösche nach dem Anruf den Anrufverlauf oder ruf von einem anderen Telefon an. Du kannst diese Seite auch im privaten Modus öffnen — dann wird sie nicht im Browserverlauf gespeichert.
