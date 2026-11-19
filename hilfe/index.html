@@ -16,6 +16,10 @@
       padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5rem);
       position: relative;
       overflow: hidden;
+    }
+    .hilfe-hero__inner {
+      max-width: 960px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       gap: 2rem;
@@ -81,7 +85,7 @@
     }
 
     @media (max-width: 680px) {
-      .hilfe-hero { flex-direction: column; text-align: center; min-height: auto; }
+      .hilfe-hero__inner { flex-direction: column; text-align: center; min-height: auto; }
       .hilfe-hero__logo { margin-inline: auto; }
       .hilfe-hero__sub { margin-inline: auto; }
       .hilfe-hero__symbol { width: clamp(100px, 40vw, 160px); order: -1; }
@@ -245,6 +249,7 @@
 <body>
 
   <div class="hilfe-hero">
+    <div class="hilfe-hero__inner">
     <div class="hilfe-hero__content">
       <a href="../">
         <img src="../Bilder_WebsiteFEMStade/FEMStade_Logo.webp" alt="FEM Stade" class="hilfe-hero__logo">
@@ -264,6 +269,7 @@
     </svg>
 
     <img class="hilfe-hero__symbol" src="venus-faust.webp" alt="" aria-hidden="true">
+    </div>
   </div>
 
   <section class="hilfe-section">
